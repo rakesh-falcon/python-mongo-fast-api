@@ -6,7 +6,7 @@ from app.models.loss_run import LossRun
 from dotenv import load_dotenv
 
 load_dotenv()
-# MONGO_URL="mongodb+srv://rakeshfalconsystem:oPG3XxyvIiw54QcM@cluster0.nyl3ud2.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0"
+# MONGO_URL=""
 async def init_db():
     MONGO_URL = os.getenv("MONGO_URL")
     if not MONGO_URL:
