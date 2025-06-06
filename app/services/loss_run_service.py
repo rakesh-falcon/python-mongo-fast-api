@@ -5,7 +5,7 @@ class LossRunService:
 
     @staticmethod
     async def create_loss_run(loss_run_in: LossRunIn):
-        return await LossRunRepository.create(loss_run_in.dict())
+        return await LossRunRepository.create(loss_run_in.model_dump())
 
     @staticmethod
     async def get_all_loss_runs():

@@ -1,5 +1,5 @@
 from app.models.loss_run import LossRun
-
+from bson import ObjectId
 class LossRunRepository:
 
     @staticmethod
@@ -10,3 +10,8 @@ class LossRunRepository:
     @staticmethod
     async def get_all():
         return await LossRun.find_all().to_list()
+    
+    @staticmethod
+    async def get_by_driver_id(driver_id: ObjectId):
+        return await LossRun.find(LossRun.driver_id == driver_id).to_list()
+        
